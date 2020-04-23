@@ -4,15 +4,16 @@ def easyMode():
     print("\n___________________ EASY MODE ON___________________\n")
     easyModeNumber = random.randrange(1,10)
     count = 1
-    guessCount = 6
+    guessCount = 6 #user has 6 chances in easy mode
+     #loop check user input for correct number if option is remaining
     while(count <= guessCount):
         try:
-            userInput = int(input("\n Guess the Number "))
+            userInput = int(input(f"\n You have {guessCount} chances Guess the Number "))
             if (userInput == easyModeNumber):
                 print("\nYour guess is right")
                 print(f"You got the number right after {count} trial \n")
                 #break
-                menuOption()  #homeAnyOther
+                menuOption()  
             elif (userInput < easyModeNumber):
                 print("\nThat was wrong\nYour guess is low")
                 print(f"\nYou have {guessCount-count} chances left\n")
@@ -30,7 +31,7 @@ def easyMode():
     menuOption()
 
 def mediumMode():
-    print("\n___________________  MEDIUM ___________________ \n")
+    print("\n___________________  MEDIUM MODE ON ___________________ \n")
     mediumModeNumber = random.randrange(1,20)
     count = 1
     guessCount = 4 # In medium mode user has 4 number options
@@ -60,7 +61,7 @@ def mediumMode():
     menuOption()
 
 def hardMode():
-    print("\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< HARD >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n")
+    print("\n___________________ HARD MODE ON ___________________\n")
     hardModeNumber = random.randrange(1,50)
     count = 1
     guessCount = 3
@@ -90,12 +91,12 @@ def hardMode():
 
 def gameHomeMenu():
     print("\n WELCOME, CAN YOU GUESS THE NUMBER? \n")
-    print("--------------------------- HOME PAGE ------------------------------\n")
-    print("1. Easy")
-    print("2. Medium")
-    print("3. Hard")
+    print("___________________ HOME___________________\n")
+    print("1. Easy Mode")
+    print("2. Medium Mode")
+    print("3. Hard Mode")
     print("4. Exit the Game \n")
-    print("Choose the level you want to play\n")
+    print("Choose the level you wish to play \n")
 
     promptQuestion = int(input("Reply: "))
     if (promptQuestion == 1):
