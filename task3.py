@@ -94,7 +94,7 @@ def hardMode():
             continue
     print(f"Game Over! You have used up your {guessCount} chances")
     menuOption()
-
+#Game Home interface
 def gameHomeMenu():
     #print("\n WELCOME, CAN YOU GUESS THE NUMBER? \n")
     print(f"\n WELCOME {userName}, CAN YOU GUESS THE NUMBER?")
@@ -140,7 +140,7 @@ def gameHomeMenu():
 #return the user to the manin menu or exit the game
 def menuOption():
     print("\nNice try, Do you want to try again? \n")
-    print("\n-------------------------- KINDLY CHOOSE WHAT NEXT --------------------------\n")
+    print("\n-------------------------- CHOOSE AN OPTION --------------------------\n")
     print("1. Return to home page?")
     print("2. Exit the Game\n")
     subhomeMenuPrompt = input("Reply: ")
@@ -151,6 +151,6 @@ def menuOption():
     else:
         exit()
 var = 1
-while var == 1:  # it is used to create an infinite loop in order to continue running the program
+while var == 1:  
     gameHomeMenu()
 
